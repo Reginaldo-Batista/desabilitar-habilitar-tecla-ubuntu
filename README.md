@@ -8,7 +8,7 @@ Exemplo: tecla F7, código físico `41`
 Instale e execute o `evtest`:
 
 ```bash
-sudo apt install evtest
+sudo apt install evtest -y
 sudo evtest
 ```
 
@@ -52,6 +52,7 @@ Substitua `41` pelo código `MSC_SCAN` da tecla desejada.
 
 ```bash
 sudo systemd-hwdb update
+sudo udevadm trigger
 sudo reboot
 ```
 
@@ -67,6 +68,7 @@ sudo rm /etc/udev/hwdb.d/90-disable-key.hwdb
 
 ```bash
 sudo systemd-hwdb update
+sudo udevadm trigger
 sudo reboot
 ```
 
